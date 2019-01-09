@@ -120,6 +120,7 @@ class ProgressiveManager{
   makeWidget(){
     return `${this.first_name} ${this.last_name} Widget`
   }
+
   hire(emp){
     this.reports.push(emp);
     if(this.reports.length === 0){
@@ -139,6 +140,19 @@ class ProgressiveManager{
   fire(index){
     this.reports.splice(index,1);
     this.bonus += 100;
+    if(this.reports.length === 0){
+      this.title = 'Not a manager'
+    } else if (this.reports.length >= 1 && this.reports.length <=3){
+      this.title = 'Barely Manager'
+    } else if (this.reports.length >= 4 && this.reports.length <=10){
+      this.title = 'Mostly Manager'
+    } else if (this.reports.length >= 11 && this.reports.length <=50){
+      this.title = 'Manager'
+    } else if (this.reports.length >= 51 && this.reports.length <=100){
+      this.title = 'Manager Plus'
+    } else {
+      this.title = 'Bestest Manager'
+    }
   }
 }
 
