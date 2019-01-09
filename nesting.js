@@ -42,38 +42,7 @@ var employees = [
   }
 ];
 
-// var employees = [
-//   {
-//     firstName: "Von",
-//     lastName: "Budibent",
-//     email: "vbudibent0@163.com",
-//     department: "Sales"
-//   },
-//   {
-//     firstName: "Catherina",
-//     lastName: "Swalowe",
-//     email: "cswalowe1@example.com",
-//     department: "Engineering"
-//   },
-//   {
-//     firstName: "Theo",
-//     lastName: "Trill",
-//     email: "ttrill2@sina.com.cn",
-//     department: "Services"
-//   },
-//   {
-//     firstName: "Elsy",
-//     lastName: "McCrorie",
-//     email: "emccrorie3@netscape.com",
-//     department: "Legal"
-//   },
-//   {
-//     firstName: "Lorie",
-//     lastName: "Handsheart",
-//     email: "lhandsheart4@fotki.com",
-//     department: "Research and Development"
-//   }
-// ];
+
 
 // Do not edit the code above.
 
