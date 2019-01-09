@@ -41,6 +41,40 @@ var employees = [
     "department": "Research and Development"
   }
 ];
+
+// var employees = [
+//   {
+//     firstName: "Von",
+//     lastName: "Budibent",
+//     email: "vbudibent0@163.com",
+//     department: "Sales"
+//   },
+//   {
+//     firstName: "Catherina",
+//     lastName: "Swalowe",
+//     email: "cswalowe1@example.com",
+//     department: "Engineering"
+//   },
+//   {
+//     firstName: "Theo",
+//     lastName: "Trill",
+//     email: "ttrill2@sina.com.cn",
+//     department: "Services"
+//   },
+//   {
+//     firstName: "Elsy",
+//     lastName: "McCrorie",
+//     email: "emccrorie3@netscape.com",
+//     department: "Legal"
+//   },
+//   {
+//     firstName: "Lorie",
+//     lastName: "Handsheart",
+//     email: "lhandsheart4@fotki.com",
+//     department: "Research and Development"
+//   }
+// ];
+
 // Do not edit the code above.
 
 /*
@@ -51,8 +85,18 @@ var employees = [
 */
 
 //Code Here
+function employeeUpdater(){
+  for(let i=0; i<employees.length; i++){
+    if(employees[i].firstName==="Theo"){
+      employees.splice(i,1);
+    } else if(employees[i].firstName==="Lorie"){
+      employees[i].department = 'HR';
+    }
+  }
+  return employees;
+}
 
-
+employeeUpdater()
 
 ////////// PROBLEM 2 //////////
 
@@ -69,7 +113,22 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 */
 
 //Code Here
-
+//Not pretty, but used nested for loops as requested
+function removeDuplicates(){
+  
+  for(let i=0; i<workplaceAccidents.length; i++){
+    let count = 0;
+    for(let j=0; j<workplaceAccidents.length; j++){
+      if(workplaceAccidents[i]==workplaceAccidents[j]){
+        count++
+        if(count>1){
+          workplaceAccidents.splice(j,1)
+        }
+      }
+    }
+  }
+  return workplaceAccidents
+}
 
 
 ////////// PROBLEM 3 //////////
@@ -100,6 +159,8 @@ var cat = {
 var grumpyActivity;
 var fluffy2ndFriend;
 
+grumpyActivity = cat.catFriends[0].activities[1];
+fluffy2ndFriend = cat.catFriends[1].name;
 
 
 ////////// PROBLEM 4 //////////
@@ -139,8 +200,13 @@ var myCar = {
 */
 
 //Code Here
-
-
+function recordCleaner(){
+  for(let i=0; i<myCar.accidents.length; i++){
+    if (myCar.accidents[i].atFaultForAccident===true){
+      myCar.accidents[i].atFaultForAccident = false;
+    }
+  }
+}
 
 ////////// PROBLEM 5 //////////
 
@@ -158,5 +224,16 @@ var numsArr = [ [1, 2, 3, 4], [5, 6], [7, 8, 9, 10, 11]];
 */
 
 //Code Here
-
+function looper(){
+  for(let i=0; i<numsArr.length; i++){
+    for(let j=0; j<numsArr[i].length; j++){
+      if(numsArr[i][j]%2 !== 0){
+        numsArr[i][j] = 'odd'
+      } else {
+        numsArr[i][j] = 'even'
+      }
+    }
+  }
+  return numsArr;
+}
 
