@@ -84,7 +84,6 @@ var workplaceAccidents = [12, 56, 44, 3, 29, 56, 56, 3, 7, 12];
 //Code Here
 //Not pretty, but used nested for loops as requested
 function removeDuplicates(){
-  
   for(let i=0; i<workplaceAccidents.length; i++){
     let count = 0;
     for(let j=0; j<workplaceAccidents.length; j++){
@@ -98,6 +97,18 @@ function removeDuplicates(){
   }
   return workplaceAccidents
 }
+
+//cleaner option if not needing nested loops
+function remDup(){
+  let filteredArr = [];
+  workplaceAccidents.forEach(el=>{
+    if(filteredArr.includes(el)){
+      filteredArr.push(el)
+    }
+  })
+  return filteredArr
+}
+
 
 
 ////////// PROBLEM 3 //////////
